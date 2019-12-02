@@ -11,9 +11,9 @@ export class QuoteComponent implements OnInit {
 
   
   quotes:Quote[] = [
-    new Quote(1, 'God will rise', 'Ermias Asghedom', 'Thomas Maghanga'),
-    new Quote(2, 'Get rich or die trying', '50 Cent', 'Nehru Oneil'),
-    new Quote(3, 'The greatest human act is to inspire', 'Nipsey Hussle', 'Julian Pops'),
+    new Quote(1, 'God will rise', 'Ermias Asghedom', 'Thomas Maghanga', new Date(2019,11,29)),
+    new Quote(2, 'Get rich or die trying', '50 Cent', 'Nehru Oneil', new Date(2019,11,30)),
+    new Quote(3, 'The greatest human act is to inspire', 'Nipsey Hussle', 'Julian Pops', new Date(2019,12,1)),
   ];
 
   toggleDetails(index){
