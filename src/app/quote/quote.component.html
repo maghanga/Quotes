@@ -6,7 +6,7 @@
         <div class="jumbotron"  *ngFor='let quote of quotes;let i = index'>
             <h3 class="quote text-center"><span class="quote"><strong>"</strong>{{quote.name}}<strong>"</strong></span></h3>
 
-            <h4><blockquote><strong>Author : </strong> {{quote.author}}</blockquote></h4>
+            <h4 class="text-center"><blockquote><strong>-</strong> {{quote.author}}</blockquote></h4>
 
             <p>
                 <button class="btn" type="button" name="like" (click)=like(i) (click)="calculateHighestVotes()"><img id="like" src="../assets/img/thumbsUpSign.png" alt="like icon"></button>
