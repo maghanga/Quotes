@@ -11,9 +11,9 @@ export class QuoteComponent implements OnInit {
 
   
   quotes:Quote[] = [
-    {id:1, name:'Get rich or die trying', author:'50 Cent', publisher:'Thomas Maghanga'},
-    {id:2, name:'The highest human act is to inspire', author:'Nipsey Hussle', publisher:'Nehru Oneil'},
-    {id:3, name:'God will rise', author:'Ermias Asghedom', publisher:'Kayla Makena'},
+    new Quote(1, 'God will rise', 'Ermias Asghedom', 'Thomas Maghanga'),
+    new Quote(2, 'Get rich or die trying', '50 Cent', 'Nehru Oneil'),
+    new Quote(3, 'The greatest human act is to inspire', 'Nipsey Hussle', 'Julian Pops'),
   ];
 
   constructor() { }
