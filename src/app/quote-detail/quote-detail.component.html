@@ -4,7 +4,7 @@
        <button class="btn" type="button" name="like" (click)=upVote(i) (click)="calculateHighestVotes()"><img id="like" src="../assets/img/thumbsUpSign.png" alt="like icon"></button>
        <button class="btn" type="button" name="dislike" (click)=downVote(i)><img id="dislike" src="../assets/img/thumbsDownSign.png" alt="dislike icon"></button>
     </p>
-    <p>Likes: </p>
+    <p>likes:{{quote.likes}} | dislikes:{{quote.dislikes}}</p>
         <br><br>
     <button (click)='deleteGoal(true)'>Delete</button>
 </div>
