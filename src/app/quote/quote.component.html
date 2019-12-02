@@ -1,9 +1,11 @@
-<div>
+<div class="container">
     <h1>Quotes</h1>
     <br><hr><br>
 
-        <div *ngFor='let quote of quotes;let i = index'>
-            <h3 *ngIf="i == quotesIndex; else dotHighlight" appHighlight><strong>"</strong>{{quote.name}}<strong>"</strong> - <blockquote>{{quote.author}}</blockquote></h3>
+        <div class="card"  *ngFor='let quote of quotes;let i = index'>
+            <h3 *ngIf="i == quotesIndex; else dotHighlight" appHighlight><span class="quoteWords"><strong>"</strong>{{quote.name}}<strong>"</strong></span></h3>
+
+            <h4><blockquote><strong>Author : </strong> {{quote.author}}</blockquote></h4>
 
             <p>
                 <button class="btn" type="button" name="like" (click)=like(i) (click)="calculateHighestVotes()"><img id="like" src="../assets/img/thumbsUpSign.png" alt="like icon"></button>
