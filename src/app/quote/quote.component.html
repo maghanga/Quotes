@@ -1,10 +1,10 @@
 <div class="container-fluid">
-    <h1>Quotes</h1>
+    <h1 class="text-center">Quotes</h1>
 
     <br><hr><br>
 
-        <div class="card"  *ngFor='let quote of quotes;let i = index'>
-            <h3 class="quote"><span class="quote"><strong>"</strong>{{quote.name}}<strong>"</strong></span></h3>
+        <div class="jumbotron"  *ngFor='let quote of quotes;let i = index'>
+            <h3 class="quote text-center"><span class="quote"><strong>"</strong>{{quote.name}}<strong>"</strong></span></h3>
 
             <h4><blockquote><strong>Author : </strong> {{quote.author}}</blockquote></h4>
 
@@ -22,8 +22,8 @@
 
         <br><hr><br>
 
-        <div>
-            
+        <div class="jumbotron">
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
  
   </div>
