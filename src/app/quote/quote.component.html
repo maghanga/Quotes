@@ -4,6 +4,13 @@
     <ul>
         <div *ngFor='let quote of quotes;let i = index'>
             <li><strong>"</strong>{{quote.name}}<strong>"</strong> - <blockquote>{{quote.author}}</blockquote></li>
+
+            <p>
+                <button class="btn" type="button" name="like" (click)=upVote(i) (click)="calculateHighestVotes()"><img id="like" src="../assets/img/thumbsUpSign.png" alt="like icon"></button>
+                    <button class="btn" type="button" name="dislike" (click)=downVote(i)><img id="dislike" src="../assets/img/thumbsDownSign.png" alt="dislike icon"></button>
+                </p>
+                <p><strong>likes :</strong> {{quote.likes}} | <strong>dislikes :</strong> {{quote.dislikes}}</p>
+
         <button (click)='toggleDetails(i)'>Quote Details</button>
 
             <app-quote-detail *ngIf='quote.showDetail' (isDone)='deleteQuote($event,i)' [quote]='quote'></app-quote-detail>               

@@ -16,6 +16,25 @@ export class QuoteComponent implements OnInit {
     new Quote(3, 'The greatest human act is to inspire', 'Nipsey Hussle', 'Julian Pops', new Date(2019, 1, 2, 11, 20, 12, 0), 0, 0),
   ];
 
+
+  like(index) {
+    this.quotes[index].likes += 1;
+  }
+  dislike(index) {
+    this.quotes[index].dislikes += 1;
+  }
+
+  // highestVotes: number = 0;
+  // quotesIndex: number = 0;
+  // calculateHighestVotes() {
+  //   for (var i = 0; i < this.quotes.length; i++) {
+  //     if (this.quotes[i].likes > this.highestVotes) {
+  //       this.highestVotes = this.quotes[i].likes;
+  //       this.quotesIndex = i;
+  //     }
+  //   }
+  // }
+
   toggleDetails(index){
     this.quotes[index].showDetail = !this.quotes[index].showDetail;
   }
