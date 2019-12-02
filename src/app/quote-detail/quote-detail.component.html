@@ -1,10 +1,11 @@
 <div>  
-    <p>{{quote.publisher}}</p>
+    <p><strong>Publisher :</strong> {{quote.publisher}}</p>
     <p>
        <button class="btn" type="button" name="like" (click)=upVote(i) (click)="calculateHighestVotes()"><img id="like" src="../assets/img/thumbsUpSign.png" alt="like icon"></button>
        <button class="btn" type="button" name="dislike" (click)=downVote(i)><img id="dislike" src="../assets/img/thumbsDownSign.png" alt="dislike icon"></button>
     </p>
-    <p>likes:{{quote.likes}} | dislikes:{{quote.dislikes}}</p>
+    <p><strong>likes :</strong> {{quote.likes}} | <strong>dislikes :</strong> {{quote.dislikes}}</p>
         <br><br>
     <button (click)='deleteGoal(true)'>Delete</button>
 </div>
+
