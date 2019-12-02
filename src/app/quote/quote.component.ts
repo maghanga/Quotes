@@ -20,6 +20,12 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showDetail = !this.quotes[index].showDetail;
   }
 
+  deleteQuote(isDone, index){
+    if(isDone){
+      this.quotes.splice(index,1);
+    }
+  }
+
   constructor() { }
 
   ngOnInit() {
