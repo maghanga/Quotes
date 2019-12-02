@@ -1,9 +1,9 @@
 <div>
     <h1>Quotes</h1>
-    <hr>
-    <ul>
+    <br><hr><br>
+
         <div *ngFor='let quote of quotes;let i = index'>
-            <li><strong>"</strong>{{quote.name}}<strong>"</strong> - <blockquote>{{quote.author}}</blockquote></li>
+            <h3 *ngIf="i == quotesIndex; else dotHighlight" appHighlight><strong>"</strong>{{quote.name}}<strong>"</strong> - <blockquote>{{quote.author}}</blockquote></h3>
 
             <p>
                 <button class="btn" type="button" name="like" (click)=like(i) (click)="calculateHighestVotes()"><img id="like" src="../assets/img/thumbsUpSign.png" alt="like icon"></button>
@@ -11,9 +11,9 @@
                 </p>
                 <p><strong>likes :</strong> {{quote.likes}} | <strong>dislikes :</strong> {{quote.dislikes}}</p>
 
-        <button (click)='toggleDetails(i)'>Quote Details</button><br><hr><br>
+        <button class="btn btn-primary" (click)='toggleDetails(i)'>View Details</button><br><hr><br>
 
             <app-quote-detail *ngIf='quote.showDetail' (isDone)='deleteQuote($event,i)' [quote]='quote'></app-quote-detail>               
         </div>
-    </ul>
+ 
   </div>

@@ -24,16 +24,16 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].dislikes += 1;
   }
 
-  // highestVotes: number = 0;
-  // quotesIndex: number = 0;
-  // calculateHighestVotes() {
-  //   for (var i = 0; i < this.quotes.length; i++) {
-  //     if (this.quotes[i].likes > this.highestVotes) {
-  //       this.highestVotes = this.quotes[i].likes;
-  //       this.quotesIndex = i;
-  //     }
-  //   }
-  // }
+  highestVotes: number = 0;
+  quotesIndex: number = 0;
+  calculateHighestVotes() {
+    for (var i = 0; i < this.quotes.length; i++) {
+      if (this.quotes[i].likes > this.highestVotes) {
+        this.highestVotes = this.quotes[i].likes;
+        this.quotesIndex = i;
+      }
+    }
+  }
 
   toggleDetails(index){
     this.quotes[index].showDetail = !this.quotes[index].showDetail;
