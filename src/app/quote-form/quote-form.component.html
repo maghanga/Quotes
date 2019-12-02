@@ -5,22 +5,31 @@
             
             <div class="form-group">
       
-                <label for="name">Quote</label>
-                <textarea class="form-control" id="name" #name="ngModel" rows="4" [(ngModel)]="newQuote.name" name="quoteWords"  required></textarea>
+                <label for="name">Quote : </label>
+                <textarea class="form-control" id="name" #name="ngModel" rows="4" [(ngModel)]="newQuote.name" name="name" required></textarea>
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                    <p>Type a quote that you would like to add</p>
+                </div>
       
             </div>
 
             <div class="form-group">
       
-                <label for="author">Author</label>
-                <input type="text" required class="form-control" id="author">
+                <label for="author">Author : </label>
+                <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" #author="ngModel" author="author">
+                <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                    <p>Author name is required</p>
+                </div>
           
             </div>
             
             <div class="form-group">
       
-                <label for="publisher">Publisher</label>
-                <input type="text" required class="form-control" id="publisher">
+                <label for="publisher">Publisher : </label>
+                <input type="text" required class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" #publisher="ngModel" publisher="publisher">
+                <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
+                    <p>Publisher name is required</p>
+                </div>
               
             </div>
 
