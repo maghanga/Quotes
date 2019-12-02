@@ -16,6 +16,10 @@ export class QuoteComponent implements OnInit {
     new Quote(3, 'The greatest human act is to inspire', 'Nipsey Hussle', 'Julian Pops'),
   ];
 
+  toggleDetails(index){
+    this.quotes[index].showDetail = !this.quotes[index].showDetail;
+  }
+
   constructor() { }
 
   ngOnInit() {
