@@ -15,6 +15,7 @@ export class QuoteDetailComponent implements OnInit {
     this.isDone.emit(done);
   }
   
+  
 
   constructor() { }
 

@@ -1,21 +1,29 @@
-<div class="container">
+<div class="container-fluid">
     <h1>Quotes</h1>
+
     <br><hr><br>
 
         <div class="card"  *ngFor='let quote of quotes;let i = index'>
-            <h3 *ngIf="i == quotesIndex; else dotHighlight" appHighlight><span class="quoteWords"><strong>"</strong>{{quote.name}}<strong>"</strong></span></h3>
+            <h3 class="quote"><span class="quote"><strong>"</strong>{{quote.name}}<strong>"</strong></span></h3>
 
             <h4><blockquote><strong>Author : </strong> {{quote.author}}</blockquote></h4>
 
             <p>
                 <button class="btn" type="button" name="like" (click)=like(i) (click)="calculateHighestVotes()"><img id="like" src="../assets/img/thumbsUpSign.png" alt="like icon"></button>
-                    <button class="btn" type="button" name="dislike" (click)=dislike(i)><img id="dislike" src="../assets/img/thumbsDownSign.png" alt="dislike icon"></button>
+                <button class="btn" type="button" name="dislike" (click)=dislike(i)><img id="dislike" src="../assets/img/thumbsDownSign.png" alt="dislike icon"></button>
                 </p>
-                <p><strong>likes :</strong> {{quote.likes}} | <strong>dislikes :</strong> {{quote.dislikes}}</p>
+                <p><strong>likes :</strong> {{quote.likes}} | <strong>dislikes :</strong> {{quote.dislikes}}
+            </p>
 
-        <button class="btn btn-primary" (click)='toggleDetails(i)'>View Details</button><br><hr><br>
+        <button class="btn btn-primary" (click)='toggleDetails(i)'>View Details</button>
 
             <app-quote-detail *ngIf='quote.showDetail' (isDone)='deleteQuote($event,i)' [quote]='quote'></app-quote-detail>               
+        </div>
+
+        <br><hr><br>
+
+        <div>
+            
         </div>
  
   </div>
