@@ -1,14 +1,31 @@
 h1{
   font-family: 'Indie Flower', cursive;
+  color: whitesmoke;
+  font-size: 50px;
 }
 h3{
   font-family: 'Indie Flower', cursive;
 }
-body {
+body{
   font-family: 'Nunito', sans-serif;
   text-align: center;
   height: 100%;
 }
 .container{
   display: inline-block;
+}
+.styled-hr{
+  border-top: 1px dotted whitesmoke;
+}
+#title{
+  font-size: 80px;
+}
+@keyframes bounce { 
+  0% { transform: translateY(0); }
+  100% { transform: translateY(38px); }
+}
+.bounce-btn:hover {
+  animation: bounce 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }

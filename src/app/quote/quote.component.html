@@ -1,11 +1,7 @@
 <body>
 <div class="container">
-    <h1 class="text-center">Quotes</h1>
-    <p>( Scroll down to add a new quote )</p>
-    <br><hr><br>
-
-  
-
+    <h1 class="text-center"><span id="title">Quotes</span> <hr class="styled-hr">( Scroll down to add a new quote )</h1>
+    <hr class="styled-hr"><br>
          <div class="jumbotron"  *ngFor='let quote of quotes;let i = index'>
             <h3 class="quote" *ngIf="i == quotesIndex; else dontHighlight" appHighlight><span class="name"><strong>"</strong>{{quote.name}}<strong>"</strong></span> - <blockquote><strong>-</strong> {{quote.author}}</blockquote></h3>
             <ng-template #dontHighlight>
@@ -16,9 +12,9 @@
             <button class="btn btn-outline-primary shadow-btn" (click)='toggleDetails(i)'>View Details</button> <br><br>
 
             <p>
-                <button class="btn" type="button" name="like" (click)=like(i) (click)="calculateHighestVotes()"><img id="like" src="../assets/img/thumbsUpSign.png" alt="like icon"></button>
-                <button class="btn" type="button" name="dislike" (click)=dislike(i)><img id="dislike" src="../assets/img/thumbsDownSign.png" alt="dislike icon"></button>
-                </p>
+                <button class="btn bounce-btn" type="button" name="like" (click)=like(i) (click)="calculateHighestVotes()"><img id="like" src="../assets/img/thumbsUpSign.png" alt="like icon"></button>
+                <button class="btn bounce-btn" type="button" name="dislike" (click)=dislike(i)><img id="dislike" src="../assets/img/thumbsDownSign.png" alt="dislike icon"></button>
+                </p><br>
                 <p><strong>likes :</strong> {{quote.likes}} || <strong>dislikes :</strong> {{quote.dislikes}}
             </p>
 
