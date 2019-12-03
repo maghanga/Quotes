@@ -16,7 +16,7 @@
             <div class="form-group">
       
                 <label for="author">Author : </label>
-                <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" #author="ngModel" author="author">
+                <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" #author="ngModel" name="author">
                 <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                     <p>Author name is required</p>
                 </div>
@@ -26,7 +26,7 @@
             <div class="form-group">
       
                 <label for="publisher">Publisher : </label>
-                <input type="text" required class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" #publisher="ngModel" publisher="publisher">
+                <input type="text" required class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" #publisher="ngModel" name="publisher">
                 <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
                     <p>Publisher name is required</p>
                 </div>
