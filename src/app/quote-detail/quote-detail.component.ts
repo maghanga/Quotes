@@ -15,7 +15,7 @@ export class QuoteDetailComponent implements OnInit {
     this.isDone.emit(done);
   }
   
-  
+  val:string  = "Uploaded {{quote.timeSince|timeCount}}"
 
   constructor() { }
 

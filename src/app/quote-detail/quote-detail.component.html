@@ -2,6 +2,8 @@
     <br>
     <p><strong>Publisher :</strong> {{quote.publisher}}</p>
     <br>
+        <p #timeSinceCreated id="timeSinceCreated">This quote was added {{quote.timeSince|timeCount}}</p>
+    <br>
     <button (click)='deleteGoal(true)'>Delete</button>
 </div>
 

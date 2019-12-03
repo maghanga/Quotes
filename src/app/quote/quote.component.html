@@ -4,11 +4,13 @@
     <br><hr><br>
 
         <div class="jumbotron"  *ngFor='let quote of quotes;let i = index'>
-            <h3 class="quote text-center"><span class="quote"><strong>"</strong>{{quote.name}}<strong>"</strong></span></h3>
+            <h3 class="quote" *ngIf="i == quotesIndex; else dontHighlight" appHighlight><span class="name"><strong>"</strong>{{quote.name}}<strong>"</strong></span> - <blockquote><strong>-</strong> {{quote.author}}</blockquote></h3>
+            <ng-template #dontHighlight>
+                <p class="quote"><span class="name">"{{quote.name}}"</span> - {{quote.author}}</p>
+            </ng-template>
 
-            <h4 class="text-center"><blockquote><strong>-</strong> {{quote.author}}</blockquote></h4>
 
-            <button class="btn btn-primary" (click)='toggleDetails(i)'>View Details</button>
+            <button class="btn btn-outline-primary" (click)='toggleDetails(i)'>View Details</button>
 
             <p>
                 <button class="btn" type="button" name="like" (click)=like(i) (click)="calculateHighestVotes()"><img id="like" src="../assets/img/thumbsUpSign.png" alt="like icon"></button>
