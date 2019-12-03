@@ -2,7 +2,7 @@
 #### An application where users can create quotes and have those quotes voted on.
 #### By **Nehru O'neil**
 ## Description
-Quotes is developed for users to find and create quotes; you can add your favorite quotes in it. The application has a button whereby you can delete a quote if he/she wishes to. The quote with most likes will be highlighted. You could as well view the number of times a quote has been liked and disliked by other users. Quotable also indicates the time passed since a quote has been created
+Quotes is developed for users to find and create quotes; you can add your favorite quotes in it. The application has a button whereby you can delete a quote if he/she wishes to. The quote with most likes will be highlighted. You could as well view the number of times a quote has been liked and disliked by other users. Quotes also indicates the time passed since a quote has been created
 ## Setup/Installation Requirements
 *Web Browser*
 ## Specifications
