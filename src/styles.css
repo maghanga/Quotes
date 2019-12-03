@@ -1,2 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Nunito|Spectral&display=swap');
+
+.shadow-btn {
+    box-shadow: 4px 4px 2px #333;
+}

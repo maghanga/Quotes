@@ -1,5 +1,5 @@
 <body>
-<div class="container-fluid">
+<div class="container">
     <h1 class="text-center">Quotes</h1>
     <p>( Scroll down to add a new quote )</p>
     <br><hr><br>
@@ -11,7 +11,7 @@
             </ng-template>
 
 
-            <button class="btn btn-outline-primary" (click)='toggleDetails(i)'>View Details</button>
+            <button class="btn btn-outline-primary shadow-btn" (click)='toggleDetails(i)'>View Details</button> <br><br>
 
             <p>
                 <button class="btn" type="button" name="like" (click)=like(i) (click)="calculateHighestVotes()"><img id="like" src="../assets/img/thumbsUpSign.png" alt="like icon"></button>

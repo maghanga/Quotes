@@ -2,5 +2,9 @@ h3{
   font-family: 'Indie Flower', cursive;
 }
 body {
-  font-family: 'Spectral', serif;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+}
+.container{
+  display: inline-block;
 }
