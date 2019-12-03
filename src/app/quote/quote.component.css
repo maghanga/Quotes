@@ -1,9 +1,13 @@
+h1{
+  font-family: 'Indie Flower', cursive;
+}
 h3{
   font-family: 'Indie Flower', cursive;
 }
 body {
   font-family: 'Nunito', sans-serif;
   text-align: center;
+  height: 100%;
 }
 .container{
   display: inline-block;

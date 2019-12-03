@@ -4,7 +4,9 @@
     <p>( Scroll down to add a new quote )</p>
     <br><hr><br>
 
-        <div class="jumbotron"  *ngFor='let quote of quotes;let i = index'>
+  
+
+         <div class="jumbotron"  *ngFor='let quote of quotes;let i = index'>
             <h3 class="quote" *ngIf="i == quotesIndex; else dontHighlight" appHighlight><span class="name"><strong>"</strong>{{quote.name}}<strong>"</strong></span> - <blockquote><strong>-</strong> {{quote.author}}</blockquote></h3>
             <ng-template #dontHighlight>
                 <p class="quote"><span class="name">"{{quote.name}}"</span> - {{quote.author}}</p>
